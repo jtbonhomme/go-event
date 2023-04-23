@@ -1,7 +1,10 @@
 # go-event
 
-![Build Status](https://github.com/jtbonhomme/go-event/workflows/Go/badge.svg)
 [![PkgGoDev](https://pkg.go.dev/badge/mod/github.com/jtbonhomme/go-event)](https://pkg.go.dev/mod/github.com/jtbonhomme/go-event)
+[![Go Report Card](https://goreportcard.com/badge/github.com/jtbonhomme/go-event)](https://goreportcard.com/report/github.com/jtbonhomme/go-event)
+[![License](https://img.shields.io/github/license/jtbonhomme/go-event.svg)](https://github.com/jtbonhomme/go-event/blob/master/LICENSE)
+[![Release](https://img.shields.io/github/v/release/jtbonhomme/go-event.svg)](https://github.com/jtbonhomme/go-event/releases/)
+[![Tests](https://github.com/jtbonhomme/go-event/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/jtbonhomme/go-event/actions/workflows/tests.yml)
 
 Simple Event observer library for Golang.
 
