@@ -98,7 +98,6 @@ linters:
     - nolintlint
     - staticcheck
     - stylecheck
-    - typecheck
     - unconvert
     - unparam
     - unused
@@ -107,6 +106,7 @@ linters:
     - gochecknoglobals
 
   # don't enable:
+  # - typecheck
   # - scopelint
   # - gochecknoglobals
   # - gocognit
