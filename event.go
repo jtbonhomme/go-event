@@ -7,7 +7,9 @@ import (
 
 // A Handler responds to an Event triggering.
 type Handler interface {
+	// On() is the callbck function called when an event is triggered.
 	On(string)
+	// ID() returns the internal handler ID.
 	ID() uuid.UUID
 }
 
@@ -28,9 +30,10 @@ func (e *Event) Register(h Handler) {
 func (e *Event) Unregister(handler Handler) {
 	for i, h := range e.handlers {
 		if h.ID() == handler.ID() {
-			e.handlers[i] = e.handlers[len(e.handlers)-1] // Copy last element to index i.
-			e.handlers[len(e.handlers)-1] = nil           // Erase last element (write zero value).
-			e.handlers = e.handlers[:len(e.handlers)-1]   // Truncate slice.
+			// Remove element i from handlers list.
+			e.handlers[i] = e.handlers[len(e.handlers)-1]
+			e.handlers[len(e.handlers)-1] = nil
+			e.handlers = e.handlers[:len(e.handlers)-1]
 			break
 		}
 	}
